@@ -13,7 +13,6 @@ class CustomerInstructor extends Model
         'customer_id',
         'employee_id',
         'assigned_at',
-        'comment',
     ];
 
     // Relación: esta asignación pertenece a un cliente

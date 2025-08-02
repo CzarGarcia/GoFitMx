@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('customer_id')->unsigned();
             $table->bigInteger('employee_id')->unsigned();
-            $table->date('assigned_date');
+            $table->date('assigned_at');
             $table->timestamps();
         });
     }

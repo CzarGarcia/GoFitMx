@@ -17,6 +17,10 @@ class Plan extends Model
         'benefits',
     ];
 
+    protected $casts = [
+        'benefits' => 'array',
+    ];
+
     // Relación: un plan puede tener muchas membresías
     public function memberships()
     {

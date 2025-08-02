@@ -20,7 +20,7 @@ class Membership extends Model
     // Relación: esta membresía pertenece a un cliente
     public function customer()
     {
-        return $this->hasOne(Customer::class);
+        return $this->belongsTo(Customer::class);
     }
 
     // Relación: esta membresía está asociada a un plan

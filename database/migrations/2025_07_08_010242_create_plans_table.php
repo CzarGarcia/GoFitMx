@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->decimal('price', 10, 2);
             $table->integer('duration_days')->default(30); // Duration in days
-            $table->string('benefits')->nullable(); // JSON or text field for benefits
+            $table->json('benefits')->nullable(); // JSON field for benefits
             $table->timestamps();
         });
     }

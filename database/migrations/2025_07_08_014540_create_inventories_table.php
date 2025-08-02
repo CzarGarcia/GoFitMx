@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\StatusInventory;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -16,7 +17,8 @@ return new class extends Migration
             $table->string('name')->unique();
             $table->text('description')->nullable();
             $table->bigInteger('branch_id')->unsigned()->nullable();
-            $table->enum('status', ['active', 'under_maintenance', 'inactive']);
+            $table->enum('status', array_map(fn($case) => $case->value, StatusInventory::cases()))
+                ->default(StatusInventory::ACTIVO->value);
             $table->date('maintenance_date')->nullable();
             $table->timestamps();
         });
