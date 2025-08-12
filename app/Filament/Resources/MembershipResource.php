@@ -28,6 +28,7 @@ class MembershipResource extends Resource
 
     protected static ?string $modelLabel = 'Membresía';
 
+    protected static ?string $slug = 'membresia';
 
     public static function form(Form $form): Form
     {

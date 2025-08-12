@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             CustomerInstructorSeeder::class,
             InventarioSeeder::class,
             PaymentSeeder::class,
+            PageSeed::class,
         ]);
     }
 }

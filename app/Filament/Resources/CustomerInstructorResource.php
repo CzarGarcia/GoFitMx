@@ -22,6 +22,8 @@ class CustomerInstructorResource extends Resource
     protected static ?string $navigationGroup = 'Administración';
     protected static ?string $pluralModelLabel = 'Clientes-Instructores';
     protected static ?string $modelLabel = 'Cliente-Instructor';
+    protected static ?string $slug = 'cliente-instructor';
+
 
     public static function table(Table $table): Table
     {

@@ -30,6 +30,8 @@ class UserResource extends Resource
 
     protected static ?string $modelLabel = 'Usuario';
 
+    protected static ?string $slug = 'usuario';
+
 
 
     public static function form(Form $form): Form
@@ -56,10 +58,10 @@ class UserResource extends Resource
                 TextInput::make('password')
                     ->label('Contraseña')
                     ->password()
-                    ->required(fn (Forms\Get $get) => $get('id') === null)
+                    ->required(fn(Forms\Get $get) => $get('id') === null)
                     ->minLength(8)
                     ->maxLength(255)
-                    ->dehydrateStateUsing(fn ($state) => bcrypt($state))
+                    ->dehydrateStateUsing(fn($state) => bcrypt($state))
                     ->columnSpanFull(),
                 Select::make('role')
                     ->label('Rol')
@@ -85,9 +87,9 @@ class UserResource extends Resource
                     ->label('Teléfono')
                     ->searchable()
                     ->sortable(),
-               TextColumn::make('role')
+                TextColumn::make('role')
                     ->label('Rol')
-                    ->formatStateUsing(fn ($state) => $state?->label())
+                    ->formatStateUsing(fn($state) => $state?->label())
                     ->sortable()
                     ->searchable(),
                 TextColumn::make('created_at')
