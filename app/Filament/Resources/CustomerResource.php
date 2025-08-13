@@ -28,6 +28,8 @@ class CustomerResource extends Resource
 
     protected static ?string $modelLabel = 'Cliente';
 
+    protected static ?string $slug = 'cliente';
+
     public static function form(Form $form): Form
     {
         return $form

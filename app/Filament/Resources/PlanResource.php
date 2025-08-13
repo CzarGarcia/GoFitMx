@@ -27,6 +27,7 @@ class PlanResource extends Resource
     protected static ?string $pluralModelLabel = 'Planes';
 
     protected static ?string $modelLabel = 'Plan';
+    protected static ?string $slug = 'plan';
 
 
     public static function form(Form $form): Form

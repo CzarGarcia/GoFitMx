@@ -30,6 +30,8 @@ class InventoryResource extends Resource
 
     protected static ?string $modelLabel = 'Inventario';
 
+    protected static ?string $slug = 'inventario';
+
     public static function form(Form $form): Form
     {
         return $form
@@ -58,7 +60,7 @@ class InventoryResource extends Resource
                     ->columnSpanFull(),
                 DateTimePicker::make('maintenance_date')
                     ->label('Fecha de Mantenimiento')
-                    ->required(fn (Forms\Get $get) => $get('status') === StatusInventory::EN_MANTENIMIENTO)
+                    ->required(fn(Forms\Get $get) => $get('status') === StatusInventory::EN_MANTENIMIENTO)
                     ->columnSpanFull(),
 
             ]);

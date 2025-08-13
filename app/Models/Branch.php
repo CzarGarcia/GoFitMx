@@ -15,8 +15,16 @@ class Branch extends Model
 
     protected $fillable = [
         'name',
+        'description',
+        'opening_hours',
+        'closing_hours',
+        'images',
         'address',
         'phone',
+    ];
+
+    protected $casts = [
+        'images' => 'array',
     ];
 
     // Relación: Una sucursal tiene muchos empleados
