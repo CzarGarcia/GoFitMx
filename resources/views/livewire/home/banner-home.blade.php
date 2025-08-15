@@ -1,6 +1,6 @@
 <!-- app/Livewire/Home/banner-home.blade.php -->
 @php
-    $page = \App\Models\Page::get()->first();
+    $page = \App\Models\page::get()->first();
 @endphp
 <section id="inicio" class="relative bg-gradient-to-br from-gray-900 to-black py-20 overflow-hidden h-screen min-h-[600px]">
     <div x-data="bannerCarousel()"
